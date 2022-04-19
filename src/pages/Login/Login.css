@@ -1,0 +1,39 @@
+.login {
+  width: 300px;
+  display: flex;
+  margin: auto;
+  margin-top: 180px;
+}
+
+.login img {
+  width: 24px;
+}
+.google-btn {
+  border-radius: 8px;
+  font-weight: bold;
+  display: flex;
+  padding: 10px 10px;
+  flex: auto;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  cursor: pointer;
+}
+.google-btn.dark {
+  background: #fff;
+  border: solid 2px #f2f2f2;
+  color: #000;
+}
+.google-btn.light {
+  background: #1b1b1b;
+  border: solid 2px #000;
+  color: #fff;
+}
+
+.google-btn.dark:active, .google-btn.dark:focus {
+  border: solid 2px #000;
+}
+.google-btn.light:active, .google-btn.light:focus {
+  border: solid 2px #fff;
+}
+

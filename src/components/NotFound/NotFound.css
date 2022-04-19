@@ -1,0 +1,44 @@
+.not-found {
+  margin: auto;
+  grid-column: 1/ -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.not-found p {
+  font-size: 18px;
+}
+
+.not-found.dark p {
+  color: #f2f2f2;
+}
+.not-found.light p {
+  color: #1b1b1b;
+}
+
+.not-found img {
+  height: 220px;
+  width: 220px;
+}
+
+.goback-btn {
+  width: 100px;
+  height: 2.4rem;
+  font-size: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.goback-btn.dark {
+  background: #f2f2f2;
+  color: #000;
+}
+.goback-btn.light {
+  background: #1b1b1b;
+  color: #fff;
+}

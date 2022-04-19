@@ -1,0 +1,64 @@
+.box {
+  position: relative;
+  border-radius: 16px;
+  padding: 10px 10px 10px 12px;
+  cursor: pointer;
+}
+
+.box.dark {
+  background-color: rgba(242, 242, 242, .5);
+  color: #000;
+}
+.box.light {
+  background-color: rgba(27, 27, 27, .5);
+  color: #fff;
+}
+
+.box-title {
+  font-size: 20px;
+  overflow-x: auto;
+}
+
+.box-footer {
+  padding: 10px 10px 10px 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.delete-icon-btn {
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.delete-icon-btn.dark {
+  background-color: #383838;
+}
+.delete-icon-btn.dark img {
+  /* #c4c4c4 */
+  filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(78%) contrast(99%); 
+}
+.delete-icon-btn:hover.delete-icon-btn.dark {
+  background-color: #000;
+}
+
+.delete-icon-btn.light {
+  background-color: #eee;
+}
+.delete-icon-btn.light img {
+  /* #1b1b1b */
+  filter: invert(0%) sepia(7%) saturate(2691%) hue-rotate(346deg) brightness(104%) contrast(79%);
+}
+.delete-icon-btn:hover.delete-icon-btn.light {
+  background-color: #fff;
+}

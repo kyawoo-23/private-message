@@ -1,0 +1,64 @@
+.create {
+  text-align: center;
+  margin-top: 40px;
+  border-radius: 14px;
+}
+
+.create.dark {
+  color: #f2f2f2;
+}
+.create.light {
+  color: #1b1b1b;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: auto;
+  text-align: left;
+  margin-top: 60px;
+}
+
+.create-input {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.create-input.dark {
+  color: #f2f2f2;
+}
+.create-input.light {
+  color: #1b1b1b;
+}
+
+.create-input:focus, .create-input:active {
+  outline: none;
+  border-bottom: 1px solid;
+}
+
+.create-btn {
+  width: 140px;
+  height: 2.8rem;
+  font-size: 16px;
+  margin-top: 22px;
+  margin-left: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.create-btn.dark {
+  background: #f2f2f2;
+  color: #000;
+}
+.create-btn.light {
+  background: #1b1b1b;
+  color: #fff;
+}

@@ -1,0 +1,133 @@
+.msg-box-header {
+  display: block;
+}
+
+.copy-url {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 4px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.copy-url span {
+  margin-right: 10px;
+  overflow: auto;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.copy-url span::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+.copy-url.dark span {
+  color: #f2f2f2;
+}
+.copy-url.light span {
+  color: #1b1b1b;
+}
+
+.copy-icon {
+  height: 18px;
+  width: 18px;
+}
+
+.copy-icon.dark {
+  /* #c4c4c4 */
+  filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(78%) contrast(99%); 
+}
+.copy-icon.light {
+  /* #1b1b1b */
+  filter: invert(0%) sepia(7%) saturate(2691%) hue-rotate(346deg) brightness(104%) contrast(79%);
+}
+
+.copy-url:hover .copy-icon.dark {
+  /* #1b1b1b */
+  filter: invert(0%) sepia(7%) saturate(2691%) hue-rotate(346deg) brightness(104%) contrast(79%);
+}
+.copy-url:hover .copy-icon.light {
+  /* #c4c4c4 */
+  filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(78%) contrast(99%); 
+}
+
+.msg-box {
+  padding: 10px;
+  height: calc(100vh - 120px);
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-auto-rows: 160px;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+/* width */
+.msg-box::-webkit-scrollbar {
+  width: 8px; 
+}
+/* Track */
+.msg-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Handle */
+.msg-box::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 20px;
+}
+/* Handle on hover */
+.msg-box::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.msg-box.dark {
+  background-color: rgba(0, 0, 0, .3);
+}
+.msg-box.light {
+  background-color: rgba(255, 255, 255, .3);
+}
+
+.msg-box-status {
+  text-align: center;
+  grid-column: 1/ -1;
+  margin-top: 100px;
+}
+
+.msg-box-status.dark {
+  color: #f2f2f2;
+}
+.msg-box-status.light {
+  color: #1b1b1b;
+}
+
+.create-account-link {
+  text-align: center;
+  margin-top: 8px;
+}
+.create-account-link a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.create-account-link.dark {
+  color: #eee;
+}
+.create-account-link.light {
+  color: #1b1b1b;
+}
+
+@media only screen and (min-width: 768px) {
+  .msg-box-header {
+    display: flex;
+    align-items: center;
+  }
+  .msg-box {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .copy-url {
+    justify-content: start;
+  }
+}
