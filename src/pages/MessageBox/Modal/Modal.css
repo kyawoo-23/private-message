@@ -1,0 +1,115 @@
+.overlay {
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  display: flex;
+  justify-content: center;
+}
+
+.msg-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  width: 85%;
+  height: 65%;
+  border-radius: 15px;
+  padding: 20px 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  animation: slideDown .2s ease-in-out 0s 1 forwards;
+}
+
+.msg-modal.dark {
+  background-color: #eee;
+  color: #000;
+}
+.msg-modal.light {
+  background-color: #383838;
+  color: #fff;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header-title {
+  font-size: 20px;
+  text-transform: capitalize;
+  cursor: default;
+}
+
+.custom-hr {
+  width: 80%;
+  border-radius: 10px;
+}
+
+.custom-hr.dark {
+  border: 2px solid #383838;
+}
+.custom-hr.light {
+  border: 2px solid #eee;
+}
+
+.modal-body {
+  height: 90%;
+  margin: 8px 0;
+  cursor: default;
+  overflow: auto;
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 5px; 
+}
+.modal-body.dark::-webkit-scrollbar-track {
+  background: #c4c4c4;
+  border-radius: 20px;
+}
+.modal-body.dark::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 20px;
+}
+.modal-body.dark::-webkit-scrollbar-thumb:hover {
+  background: #383838;
+}
+.modal-body.light::-webkit-scrollbar-track {
+  background: #555;
+  border-radius: 20px;
+}
+.modal-body.light::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: 20px;
+}
+.modal-body.light::-webkit-scrollbar-thumb:hover {
+  background: #f0f0f0;
+}
+
+.close-icon {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.close-icon.dark {
+  filter: none;
+}
+.close-icon.light {
+  filter: invert(94%) sepia(100%) saturate(0%) hue-rotate(181deg) brightness(106%) contrast(106%);
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}

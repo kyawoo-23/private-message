@@ -15,9 +15,9 @@ export default function NavBar() {
   return (
     <div className='navbar'>
       <Link to='/' className={`navbar-text ${mode}`}>
-        <h3>Private Message</h3>
+        <h3 style={{fontFamily: 'Roboto Condensed, sans-serif'}}>Private Message</h3>
       </Link>
-      {user && (
+
         <div className={`navbar-btn navbar-text ${mode}`}>
           <div 
             className={`mode-icon ${mode}`} 
@@ -28,17 +28,21 @@ export default function NavBar() {
               alt={`${mode}-mode icon`} 
             />
           </div>
-          <p className='navbar-item'>{user.displayName}</p>
-          <p 
-            style={{cursor: 'pointer'}} 
-            onClick={logout} 
-            className='navbar-item'
-          >
-            {!isPending && 'Logout'}
-            {isPending && 'Logging out'}
-          </p>
+          {user && (
+            <>
+              <p className='navbar-item'>{user.displayName}</p>
+              <p 
+                style={{cursor: 'pointer'}} 
+                onClick={logout} 
+                className='navbar-item'
+              >
+                {!isPending && 'Logout'}
+                {isPending && 'Logging out'}
+              </p>
+            </>
+          )}
         </div>
-      )}
+
     </div>
   )
 }

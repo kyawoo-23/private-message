@@ -1,7 +1,10 @@
 .create {
   text-align: center;
-  margin-top: 40px;
   border-radius: 14px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
 }
 
 .create.dark {
@@ -14,7 +17,7 @@
 .create-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   width: 300px;
   margin: auto;
   text-align: left;

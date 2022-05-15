@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import './MessageBox.css'
 import Message from './Message/Message'
 import SendMessage from './SendMessage/SendMessage'
+import Modal from './Modal/Modal'
 import NotFound from '../../components/NotFound/NotFound'
 import { useThemeContext } from '../../hooks/useThemeContext'
 import { useAuthContext } from '../../hooks/useAuthContext'
@@ -21,6 +22,9 @@ export default function MessageBox() {
   const [isPending, setIsPending] = useState(false)
   const [error, setError] = useState(null)
   const [orderDesc, setOrderDesc] = useState(true)
+  const [openModal, setOpenModal] = useState(false)
+  const [modalHeader, setModalHeader] = useState(null)
+  const [modalText, setModalText] = useState(null)
 
   useEffect(() => {
     setIsPending(true)
@@ -48,6 +52,13 @@ export default function MessageBox() {
 
   return (
     <>
+      {openModal && (
+        <Modal 
+          setOpenModal={setOpenModal} 
+          modalHeader={modalHeader}
+          modalText={modalText} 
+        />
+      )}
       {exist && user && (
         <div className='msg-box-header'>
           <div 
@@ -67,7 +78,13 @@ export default function MessageBox() {
             user.uid === userId ? (
               documents.length !== 0 ? (
                 documents.map((doc, idx) => (
-                  <Message msg={doc} key={idx} /> 
+                  <Message 
+                    key={idx} 
+                    msg={doc} 
+                    setOpenModal={setOpenModal} 
+                    setModalHeader={setModalHeader}
+                    setModalText={setModalText} 
+                  /> 
                 ))
               ) : (
                 <p className={`msg-box-status ${mode}`}>No Messages yet.</p>
