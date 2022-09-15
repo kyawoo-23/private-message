@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
 import './Message.css'
 import deleteIcon from '../../../icons/trash.svg'
@@ -35,6 +35,7 @@ export default function Message({ msg, setOpenModal, setModalText, setModalHeade
           className={`delete-icon-btn ${mode}`} 
           onClick={(e) => {
             e.preventDefault()
+            e.stopPropagation()
             window.confirm("Are you sure, you want to delete this Message?") && handleDelete()
           }}
         >
